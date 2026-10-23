@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>Hello World |  Hexo</title>
+      <title>Hello World |  三文是睡神</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -46,7 +46,38 @@
 </html>
 
 
-<body>
+<body><!-- 隐藏系统鼠标并替换为动态GIF -->
+<style>
+  body, a, button, input, textarea, select {
+    cursor: none !important; /* 隐藏系统默认鼠标 */
+  }
+  #custom-cursor {
+    position: fixed;
+    width: 40px; /* 调整 GIF 大小 */
+    height: 40px;
+    pointer-events: none; /* 不阻挡点击事件 */
+    z-index: 999999;
+    background-image: url('/images/mouse.gif'); /* 你的动态图路径 */
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease-out; /* 让鼠标有微小的平滑感 */
+  }
+</style>
+
+<script>
+  // 创建跟着鼠标跑的 DOM 元素
+  document.addEventListener('DOMContentLoaded', function() {
+    var cursor = document.createElement('div');
+    cursor.id = 'custom-cursor';
+    document.body.appendChild(cursor);
+
+    document.addEventListener('mousemove', function(e) {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    });
+  });
+</script>
   <div id="app">
     
       
@@ -233,7 +264,7 @@
     <ul>
       <li>
         Copyrights &copy;
-        2015-2026
+        2026
         <i class="ri-heart-fill heart_icon"></i> John Doe
       </li>
     </ul>
@@ -286,7 +317,7 @@
 <nav class="navbar">
   
   <div class="logo">
-    <a href="/"><img src="/images/ayer-side.svg" alt="Hexo"></a>
+    <a href="/"><img src="/images/ayer-side.svg" alt="三文是睡神"></a>
   </div>
   
   <ul class="nav nav-main">

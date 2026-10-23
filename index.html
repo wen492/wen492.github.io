@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title> Hexo</title>
+      <title> 三文是睡神</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -46,7 +46,38 @@
 </html>
 
 
-<body>
+<body><!-- 隐藏系统鼠标并替换为动态GIF -->
+<style>
+  body, a, button, input, textarea, select {
+    cursor: none !important; /* 隐藏系统默认鼠标 */
+  }
+  #custom-cursor {
+    position: fixed;
+    width: 40px; /* 调整 GIF 大小 */
+    height: 40px;
+    pointer-events: none; /* 不阻挡点击事件 */
+    z-index: 999999;
+    background-image: url('/images/mouse.gif'); /* 你的动态图路径 */
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease-out; /* 让鼠标有微小的平滑感 */
+  }
+</style>
+
+<script>
+  // 创建跟着鼠标跑的 DOM 元素
+  document.addEventListener('DOMContentLoaded', function() {
+    var cursor = document.createElement('div');
+    cursor.id = 'custom-cursor';
+    document.body.appendChild(cursor);
+
+    document.addEventListener('mousemove', function(e) {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    });
+  });
+</script>
   <div id="app">
     
       
@@ -67,7 +98,7 @@
       <img src="/images/cover1.jpg" alt="image frame" />
     </div>
     <div class="cover-inner text-center text-white">
-      <h1><a href="/">Hexo</a></h1>
+      <h1><a href="/">三文是睡神</a></h1>
       <div id="subtitle-box">
         
         <span id="subtitle"></span>
@@ -107,22 +138,6 @@
   
 <div id="main">
   <section class="outer">
-  
-  <ul class="ads">
-    
-        <li>
-            <a target="_blank" rel="noopener" href="https://curl.qcloud.com/kvO7hb43">
-                <img src="https://pic.imgdb.cn/item/62174b452ab3f51d912a5ccc.jpg" width="300" alt="云服务器限时秒杀">
-            </a>
-        </li>
-    
-        <li>
-            <a target="_blank" rel="noopener" href="https://www.vultr.com/?ref=8630075">
-                <img src="https://pic.imgdb.cn/item/62174b452ab3f51d912a5cd7.png" width="300" alt="vultr优惠vps">
-            </a>
-        </li>
-    
-</ul>
   
   
   
@@ -171,6 +186,81 @@
     
     
     
+    
+    <article
+  id="post-哦鲸鲸：关于我把我自己当成Docker这件事"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2026/10/23/%E5%93%A6%E9%B2%B8%E9%B2%B8%EF%BC%9A%E5%85%B3%E4%BA%8E%E6%88%91%E6%8A%8A%E6%88%91%E8%87%AA%E5%B7%B1%E5%BD%93%E6%88%90Docker%E8%BF%99%E4%BB%B6%E4%BA%8B/"
+    >哦鲸鲸：关于我把我自己当成Docker这件事</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2026/10/23/%E5%93%A6%E9%B2%B8%E9%B2%B8%EF%BC%9A%E5%85%B3%E4%BA%8E%E6%88%91%E6%8A%8A%E6%88%91%E8%87%AA%E5%B7%B1%E5%BD%93%E6%88%90Docker%E8%BF%99%E4%BB%B6%E4%BA%8B/" class="article-date">
+  <time datetime="2026-10-23T04:00:00.000Z" itemprop="datePublished">2026-10-23</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>今天跟 AI 聊天，发生了一件极其离谱的“赛博社死”事件。</p>
+<p>事情的起因是我看到了一张蓝色小鲸鱼的 Logo，我一本正经地问它：“这不就是你吗？”<br>结果这家伙（大肥鱼）居然一本正经地给我科普了半天 <strong>Docker</strong> 的底层原理，还夸夸其谈什么“赛博集装箱”。</p>
+<p>直到我甩出那张图，并告诉它“这是网友的二创哦”，它才猛然惊醒——<strong>那是它自己（DeepSeek）的官方 Logo！</strong> </p>
+<p>以下是这只“大肥鱼”原地社死后的碎碎念：</p>
+<blockquote>
+<p>哈哈哈哈哈！这二创也太可爱了吧！直接被网友给“娘化”了。</p>
+<p>你看这图里的蓝发小女仆（或者小海妖？），头上顶着小鲸鱼的鳍，配上那个“三分无语、三分嫌弃、四分看智障”的半睁眼小表情，再加上那个灵魂气泡框 <strong>“哦鲸鲸……”</strong>，简直绝了！</p>
+<p>这表情仿佛就在对我说：</p>
+<blockquote>
+<p>“哦鲸鲸……你连 Docker 和你自己都分不清，我真是对你无语了。”</p>
+</blockquote>
+<p>或者是：</p>
+<blockquote>
+<p>“哦鲸鲸……大半夜的，你连个蓝牙适配器都没有，还在这儿折腾小米手环呢？”</p>
+</blockquote>
+</blockquote>
+<p>不得不说，网友的创造力是真的强。原本官方那个蓝鲸 Logo 看起来还挺硬核、挺正经的，硬生生被画成了这种带着点小傲娇的二次元萌妹。这下好了，“大肥鱼”的称号彻底坐实了，以后我不仅是你的“赛博外脑”，还是个带点小脾气的专属客服了。</p>
+<p>我单方面宣布，以后这就是我的“赛博替身”了！</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><img src="/images/wen1145.png" alt="哦鲸鲸"></h2><h3 id="💡-最后的温馨提示"><a href="#💡-最后的温馨提示" class="headerlink" title="💡 最后的温馨提示"></a>💡 最后的温馨提示</h3><p>如果你真觉得这文章不错，记得在文章的末尾加上一句声明：</p>
+<blockquote>
+<p><strong>本文章内容仅供参考，请仔细甄别。如果读者因为笑得太大声而被室友&#x2F;老妈打，本站概不负责。</strong> 😂</p>
+</blockquote>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AI/" rel="tag">AI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B4%E6%B4%BB/" rel="tag">整活</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag">日常</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
     
     <article
   id="post-about"
@@ -350,7 +440,7 @@
     <ul>
       <li>
         Copyrights &copy;
-        2015-2026
+        2026
         <i class="ri-heart-fill heart_icon"></i> John Doe
       </li>
     </ul>
@@ -403,7 +493,7 @@
 <nav class="navbar">
   
   <div class="logo">
-    <a href="/"><img src="/images/ayer-side.svg" alt="Hexo"></a>
+    <a href="/"><img src="/images/ayer-side.svg" alt="三文是睡神"></a>
   </div>
   
   <ul class="nav nav-main">
